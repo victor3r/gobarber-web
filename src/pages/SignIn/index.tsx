@@ -19,7 +19,6 @@ const SignIn: React.FC = () => (
         <Input
           name="email"
           icon={FiMail}
-          type="email"
           placeholder="E-mail"
           autoComplete="off"
         />
