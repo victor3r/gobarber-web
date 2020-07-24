@@ -13,7 +13,7 @@ interface SignInCredentials {
 
 interface AuthContextData {
   user: Record<string, unknown>;
-  signIn(credentials: SignInCredentials): void;
+  signIn(credentials: SignInCredentials): Promise<void>;
   signOut(): void;
 }
 
