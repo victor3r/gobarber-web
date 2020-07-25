@@ -13,7 +13,7 @@ export const Container = styled.div<ContainerProps>`
   border-radius: 10px;
   border: 2px solid #232129;
   color: #666360;
-  padding: 16px;
+  padding: 0 16px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -50,6 +50,7 @@ export const Container = styled.div<ContainerProps>`
     background: transparent;
     border: 0;
     color: #f4ede8;
+    padding: 16px 0;
 
     &::placeholder {
       color: #666360;
