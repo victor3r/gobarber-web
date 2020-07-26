@@ -2,7 +2,7 @@
 GoBarber Web
 </h1>
 
-<p align="center">The web version of the gobarber app that is used by users who provide services within the app
+<p align="center">The web version of the GoBarber app that is used by users who provide services within the app
 </p>
 
 <p align="center">
