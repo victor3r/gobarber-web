@@ -28,7 +28,7 @@ const SignIn: React.FC = () => {
   const { addToast } = useToast();
 
   const handleSubmit = useCallback(
-    async ({ email, password }: SignInFormData) => {
+    async (data: SignInFormData) => {
       try {
         formRef.current?.setErrors({});
 
@@ -39,14 +39,11 @@ const SignIn: React.FC = () => {
           password: Yup.string().required('Senha obrigatória'),
         });
 
-        await schema.validate(
-          { email, password },
-          {
-            abortEarly: false,
-          },
-        );
+        await schema.validate(data, {
+          abortEarly: false,
+        });
 
-        await signIn({ email, password });
+        await signIn(data);
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const validationErrors = getValidationErrors(err);
